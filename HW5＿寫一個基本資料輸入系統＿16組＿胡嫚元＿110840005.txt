@@ -1,0 +1,59 @@
+string confirm = "2";
+string name = "";
+string gender = "";
+string bday = "";
+string id = "";
+
+do
+{
+
+ if (confirm == "2" || confirm == "3")
+ {
+    Console.WriteLine("請輸入姓名：");
+    name = Console.ReadLine();
+ }
+
+ if (confirm == "2" || confirm == "4")
+ {
+    Console.WriteLine("請輸入性別（男性/女性）：");
+    gender = Console.ReadLine();
+ }
+
+ if (confirm == "2" || confirm == "5")
+ {
+    Console.WriteLine("請輸入出生年月日（YYYYMMDD）：");
+    bday = Console.ReadLine();
+ }
+
+ if (confirm == "2" || confirm == "6")
+ {
+    Console.WriteLine("請輸入學號");
+    id = Console.ReadLine();
+ }
+
+ Console.WriteLine("請確認輸入資料");
+ Console.WriteLine("姓名："+ name);
+ Console.WriteLine("性別："+ gender);
+ Console.WriteLine("出生年月日："+ bday);
+ Console.WriteLine("學號："+ id);
+
+ Console.WriteLine("正確請輸入1,重新填寫請輸入2");
+ confirm = Console.ReadLine();
+
+ if (confirm == "1")
+ {
+    Console.WriteLine("已完成資料建置");
+ }
+ else
+ {
+    Console.WriteLine("重新輸入姓名請按3,");
+    Console.WriteLine("重新輸入性別請按4,");
+    Console.WriteLine("重新輸入生日請按5,");
+    Console.WriteLine("重新輸入學號請按6.");
+    confirm = Console.ReadLine();
+ }
+}
+while
+(
+confirm == "2" || confirm == "3" || confirm == "4" || confirm == "5" || confirm == "6"
+);
